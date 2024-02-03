@@ -56,7 +56,7 @@ const Sign_up = () => {
 
     try {
       // Make a POST request to the signup API (replace with the actual signup API endpoint)
-      const response = await fetch('http://localhost:8080/signup', {
+      const response = await fetch('https://fundrevbackend1.onrender.com/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -88,7 +88,7 @@ const Sign_up = () => {
   
     try {
       // Make a POST request to the login API (replace with the actual login API endpoint)
-      const response = await fetch('http://localhost:8080/login', {
+      const response = await fetch('https://fundrevbackend1.onrender.com/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -99,7 +99,7 @@ const Sign_up = () => {
       // Check if the request was successful (status code 2xx)
       if (response.ok) {
         // Fetch user type based on the entered username
-        const userTypeResponse = await fetch(`http://localhost:8080/usertype?username=${loginApiData.username}`);
+        const userTypeResponse = await fetch(`https://fundrevbackend1.onrender.com/usertype?username=${loginApiData.username}`);
         const userTypeData = await userTypeResponse.json();
   
         console.log('Login successful!');

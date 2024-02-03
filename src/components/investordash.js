@@ -15,7 +15,7 @@ const InvestorDashboard = () => {
   const handleInterestedClick = async (startupUsername) => {
     try {
       // Make a POST request to the 'interested' API
-      const response = await fetch('http://localhost:8080/interested', {
+      const response = await fetch('https://fundrevbackend1.onrender.com/interested', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -43,7 +43,7 @@ const InvestorDashboard = () => {
     const fetchData = async () => {
       try {
         // Make a GET request to the startups API
-        const response = await fetch('http://localhost:8080/startups');
+        const response = await fetch('https://fundrevbackend1.onrender.com/startups');
         if (response.ok) {
           const data = await response.json();
           setStartups(data.startups);

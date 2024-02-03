@@ -11,7 +11,7 @@ const StartupDashboard = () => {
     const fetchData = async () => {
       try {
         // Make a GET request to the startups API
-        const response = await fetch('http://localhost:8080/startups');
+        const response = await fetch('https://fundrevbackend1.onrender.com/startups');
         if (response.ok) {
           const data = await response.json();
           // Find the startup with the specified username
